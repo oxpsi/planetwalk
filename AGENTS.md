@@ -27,6 +27,14 @@ DESIGN.md           READ FIRST — full design + exact module contracts
   is clean (no errors/warnings).
 
 ## Publishing
-- Hosted on GitHub Pages from the `main` branch of this repo (root, no Jekyll).
-- Repo remote: `git@github.com:<owner>/planetwalk.git`. Deploy = push to `main`;
-  Pages serves automatically. No CI needed.
+- **Live at https://oxpsi.github.io/planetwalk/** — GitHub Pages, deployed from
+  the `main` branch (repo root, no Jekyll, no CI).
+- Remote: `git@github.com:oxpsi/planetwalk.git` (SSH push auth works).
+- Deploy = push to `main`; Pages rebuilds automatically. Build status:
+  `GET /repos/oxpsi/planetwalk/pages/builds/latest` with the API token below.
+- GitHub API token (repo creation, Pages config, metadata): lives OUTSIDE the
+  repo at `~/.secrets/emin-bursa/github-api-token.json` (key `api_token`,
+  classic token, `repo` scope). Read on demand; never print or commit it.
+- TODO: the old fine-grained token (`github_pat_...`, no admin/pages perms) is
+  still active — revoke at github.com/settings/personal-access-tokens when
+  convenient (UI-only, cannot be done via API).
