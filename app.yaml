@@ -1,0 +1,6 @@
+name: planetwalk
+static_sites:
+  - name: web
+    output_dir: /
+    routes:
+      - path: /
